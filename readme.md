@@ -6,8 +6,8 @@ This goal of this branch is to create the page that will track what the donors h
 ## Resources
 
 ## Contributors
-- Lela Bones
-- Anthony Cicero
-- Josias Cruz
-- Chukwubuikem Okafo
-- Stephanie Warman
+- Lela Bones          @lelatbones
+- Anthony Cicero      @TonyCicero
+- Josias Cruz         @Josias-Cruz
+- Chukwubuikem Okafo  @ikem14
+- Stephanie Warman    @swarman2
