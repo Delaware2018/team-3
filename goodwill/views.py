@@ -79,6 +79,8 @@ def help_page():
     return render_template('help.html')
 
 
+
+
 if __name__ == '__main__':
     # runs app in debug mode
         app.run(port=5000, debug=True)

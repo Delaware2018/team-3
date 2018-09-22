@@ -4,8 +4,8 @@
 
 {% block body %}
 
-<h1 style="background-color:lightgray;">Items Purchased</h1>
-<form action="/action_page.php">
+<h1 style="background-color:lightgray;">Items Donated</h1>
+<form action="/action_page.php" onsubmit="return redirect()">
 
 <label for="elect">Electronics</label>
  	<input type="number" id="elect" name="elect" placeholder="0" >
@@ -49,6 +49,13 @@
 
 
 
+<script>
+function redirect() {
+  window.location.replace("thankyou");
+  return false;
+}
+
+</script>
 
 
 
