@@ -1,13 +1,48 @@
-<!--Author: Lela Bones
-    This document conatins the homepage contents-->
 {% extends 'layout.html' %}
+
 
 {% block body %}
  <div class="jumbotron text-center">
      <h1>Welcome to the </h1>
-     <h1>Goodwill App</h1>
+     <h1>Goodwill DE & DE County App</h1>
         <p class="lead">Here you will be able to log in and track your donations and purchases at Goodwill. You also will earn reward points for the items you donate and buy.</p>
-         <h2><a href="/sign_in"><span class="label label-default">Sign In</span></a></h2>
+	<h2><a href="/sign_in"><span class="label label-default">Sign In</span></a></h2>
+	
+ </div>
+
+
+<div>
+	<h2> Mission </h2>
+	<p> To improve the quality of life for people with barriers to self-sufficiency through the Power of Work.</p>
+ </div> 
+
+
+ <div>
+	<h2> Donor Highlights </h2>
+	<p> This section will highlight a donor recognized by all the organizations in order to bolster a sense of community</p>
+ </div> 
+ 
+ <div>
+	<h2>Donation Items Currently Needed: </h2>
+	<ul>
+		<li> Socks </li>
+		<li> Shoes </li>
+		<li> Men's Pants</li>
+		<li> Non-Perishable Food Items</li>
+	</ul>
+ </div>
+
+ <div>
+	<h2> Featured Impact </h2>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/nvXJZdtIKnY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+ </div>
+ <div>
+	<h2> Ranking Board </h2>
+	<tb>
+		<th>Name</th>
+		<th>Ranking</th>
+		<th>Points</th>
+	</tb>
  </div>
 
 {% endblock %}

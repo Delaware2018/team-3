@@ -9,6 +9,7 @@ from flask_googlemaps import GoogleMaps
 from flask_googlemaps import Map
 
 
+
 # creates instance of the class Flask
 app = Flask(__name__)
 GoogleMaps(app)
@@ -68,11 +69,15 @@ def impact():
     #loaffs the template impact
     return render_template('impact.html')
 
-# locally creates a page
-@app.route('/create_account')
-def create_account():
-    # load the template about
-    return render_template('create_account.html')
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username']  != 'admin' or request.form['password'] != 'admin':
+            error = 'Invalid Credentials. Please try again'
+        else:
+            return redirect(url_for('home'))
+    return render_template('login.html', error=error)
 
 # locally creates a page
 @app.route('/about')
