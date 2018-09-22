@@ -78,6 +78,10 @@ def thankyou():
 def help_page():
     return render_template('help.html')
 
+# locally creates a page
+@app.route('/feedback')
+def feedback():
+    return render_template('feedback.html')
 
 
 
