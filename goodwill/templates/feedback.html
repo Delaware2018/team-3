@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Feedback</h1>
+ 
+<form action="/action_page.php" onsubmit="return redirect()">
+  <textarea id="subject" name="subject" placeholder="Please comment here.." style="height:200px;width:750px;"></textarea>
+<br>
+ <input type="submit" value="Submit">
+</form> 
+</div>
+
+<script>
+function redirect() {
+  window.location.replace("thankyouF");
+  return false;
+}
+</script>
+
+
+{% endblock %}

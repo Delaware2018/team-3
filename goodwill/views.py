@@ -139,6 +139,12 @@ def thankyou():
     # load the template about
     return render_template('thankyou.html')
 
+# locally creates a page
+@app.route('/thankyouF')
+def thankyouF():
+    # load the template about
+    return render_template('thankyouF.html')
+
 if __name__ == '__main__':
     # runs app in debug mode
         app.run(port=5000, debug=True)
