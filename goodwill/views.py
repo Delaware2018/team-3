@@ -47,6 +47,12 @@ def about():
 def form():
     # load the template about
     return render_template('form.html')
+
+# locally creates a page
+@app.route('/create_account')
+def create_account():
+    # load the template about
+    return render_template('create_account.html')
     
 # locally creates a page
 @app.route('/help')
