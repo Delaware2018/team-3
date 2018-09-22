@@ -145,6 +145,10 @@ def thankyouF():
     # load the template about
     return render_template('thankyouF.html')
 
+@app.route('/create_account')
+def create_account():
+    return render_template('create_account.html')
+
 if __name__ == '__main__':
     # runs app in debug mode
         app.run(port=5000, debug=True)

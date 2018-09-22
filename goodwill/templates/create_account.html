@@ -1,0 +1,103 @@
+<!--Author: Tony Cicero
+    This document conatins the homepage contents-->
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1 style="background-color: lightgray;"> Create an Account </h1>
+
+<form action="/action_page.php" onsubmit="return redirect()">
+   <label for="fname">First Name*</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+<br>
+    <label for="lname">Last Name*</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+  
+<br>
+    <label for="email">Email Address*</label>
+    <input type="email" id="email" name="username" placeholder="Your Email Address.." required>
+<br>
+    <label for="Phone">Phone Number</label>
+    <input type="tel" id="Phone" name="phone" placeholder="Your Phone Number.." >
+<br>
+<label for="gender">Gender</label><br>
+<input type="radio" name="gender" value="male" > Male
+<input type="radio" name="gender" value="female"> Female<br>
+<br>
+<label for="married">Married</label><br>
+<input type="radio" name="married" value="Yes" > Yes
+<input type="radio" name="married" value="No"> No<br>
+<br>
+<label for="kids">Kids</label><br>
+<input type="radio" name="kids" value="Yes" > Yes
+<input type="radio" name="kids" value="No"> No<br>
+<br>
+    <label for="Pass">Password</label>
+    <input type="password" id="password" name="password" placeholder="Password" >
+
+
+
+
+
+
+
+<input type="submit">
+</form>
+
+
+
+<script>
+function redirect() {
+  window.location.replace("/");
+  return false;
+}
+</script>
+
+
+
+<style>
+form { 
+margin: 0 auto; 
+width:250px;
+}
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: #555;
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+</style>
+
+<!--js script to collapse/expand boxes -->
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+{% endblock %}
