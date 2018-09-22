@@ -5,11 +5,43 @@ import os, os.path
 from pathlib import Path
 from flask import Flask, flash, request, redirect, url_for, render_template
 from flask import send_from_directory
+from flask_googlemaps import GoogleMaps
+from flask_googlemaps import Map
 
 
 # creates instance of the class Flask
 app = Flask(__name__)
+GoogleMaps(app)
 
+@app.route("/locations")
+def mapview():
+    # creating a map in the view
+    mymap = Map(
+        identifier="view-side",
+        lat=37.4419,
+        lng=-122.1419,
+        markers=[(37.4419, -122.1419)]
+    )
+    sndmap = Map(
+        identifier="sndmap",
+        lat=37.4419,
+        lng=-122.1419,
+        markers=[
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+             'lat': 37.4419,
+             'lng': -122.1419,
+             'infobox': "<b>Hello World</b>"
+          },
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+             'lat': 37.4300,
+             'lng': -122.1400,
+             'infobox': "<b>Hello World from other place</b>"
+          }
+        ]
+    )
+    return render_template('locations.html', mymap=mymap, sndmap=sndmap)
 # locally creates a page
 @app.route('/')
 def index():
@@ -42,11 +74,6 @@ def about():
     # load the template about
     return render_template('about.html')
     
-# locally creates a page
-@app.route('/locations')
-def locations():
-    # load the template about
-    return render_template('locations.html')
 # locally creates a page
 @app.route('/help')
 def help_page():
