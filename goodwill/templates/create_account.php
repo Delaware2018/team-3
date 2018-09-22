@@ -1,12 +1,5 @@
-<!--Author: Tony Cicero
-    This document conatins the homepage contents-->
-{% extends 'layout.html' %}
-
-{% block body %}
-
-
 <?php
-// Include config file -- used to connect to database
+// Include config file
 require_once 'config.php';
  
 // Define variables and initialize with empty values
@@ -71,16 +64,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
-        // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+        // Prepare an insert statement -- MAKE SURE THIS MATCHES SQL DB
+        $sql = "INSERT INTO users (username, password, fname, lname, phone) VALUES (?, ?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password, $param_lname, $param_fname, $param_phone);
             
             // Set parameters
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+ 		$param_lname = $lastname;
+ 		$param_fname = $firstname;
+ 		$param_phone = $phone;
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -99,82 +95,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 ?>
+ 
 
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-   <label for="fname">First Name*</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-<br>
-    <label for="lname">Last Name*</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-  
-<br>
-    <label for="email">Email Address*</label>
-    <input type="email" id="email" name="emailaddr" placeholder="Your Email Address.." required>
-<br>
-    <label for="Phone">Phone Number</label>
-    <input type="tel" id="Phone" name="Phone" placeholder="Your Phone Number.." >
-
-<br>
-    <label for="Pass">Password*</label>
-    <input type="password" id="pass" name="Phone" placeholder="Password" >
-
-
-
-
-
-
-
-<input type="submit">
-</form>
-
-
-
-
-
-
-
-<style>
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-}
-
-.active, .collapsible:hover {
-    background-color: #555;
-}
-
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
-</style>
-
-<!--js script to collapse/expand boxes -->
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
-
-
-{% endblock %}

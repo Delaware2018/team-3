@@ -4,37 +4,18 @@
 
 {% block body %}
 
-<h1 style="background-color: lightgray;"> Create an Account </h1>
+<h1 style ="background-color:lightgray;">Thank You!</h1>
 
-<form action="/action_page.php">
-   <label for="fname">First Name*</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-<br>
-    <label for="lname">Last Name*</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-  
-<br>
-    <label for="email">Email Address*</label>
-    <input type="email" id="email" name="username" placeholder="Your Email Address.." required>
-<br>
-    <label for="Phone">Phone Number</label>
-    <input type="tel" id="Phone" name="phone" placeholder="Your Phone Number.." >
+<p> you have earned <var id="points">0</var> points </p>
 
-<br>
-    <label for="Pass">Password</label>
-    <input type="password" id="password" name="password" placeholder="Password" >
-
-
-
-
-
-
-
-<input type="submit">
-</form>
-
-
-
+<script>
+//this function will be used in the future to allow for specifying points earned
+window.onload = getpoints;
+function getpoints() {
+    var x = document.getElementById("myVar");
+    x = "50";
+}
+</script>
 
 
 
@@ -45,9 +26,6 @@ form {
 margin: 0 auto; 
 width:250px;
 }
-
-
-
 
 .collapsible {
     background-color: #777;
@@ -73,7 +51,7 @@ width:250px;
 }
 </style>
 
-<!--js script to collapse/expand boxes -->
+<!--js script to collapse/expand boxes (NOT USED ANYMORE) -->
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;

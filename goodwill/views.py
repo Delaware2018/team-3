@@ -66,7 +66,13 @@ def login():
     # load the template about
     return render_template('login.html')
 
+# locally creates a page
+@app.route('/thankyou')
+def thankyou():
+    # load the template about
+    return render_template('thankyou.html')
     
+
 # locally creates a page
 @app.route('/help')
 def help_page():
