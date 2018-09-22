@@ -1,6 +1,8 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+<script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
+
 <h1>Rewards</h1>
 <h2 style="color: Green;"> You have <var id="points">0</var> Points! </h2>
 
@@ -37,14 +39,20 @@
 
 </div>
 
+	<svg id="barcode"></svg>
+
 
 <script>
+
+	var max = 999999;
+	var min = 100000;
 	var x = 1500;
  document.getElementById("points").innerHTML = x;
 
 function R1(){
 	if (x >=1000){
 		x-=1000;
+	JsBarcode("#barcode", Math.random() * (max - min) + min);
 	}else{
 		alert("Sorry! You don't have enough points.");
 	}
