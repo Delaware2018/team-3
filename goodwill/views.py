@@ -32,49 +32,49 @@ def mapview():
              'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
              'lat': 39.60655499999999,
              'lng': -75.71021300000001,
-             'infobox': "<b>Hello World</b>"
+             'infobox': "<b>Bear</b>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
              'lat': 38.7364091,
              'lng': -75.5936,
-             'infobox': "<b>Hello World from other place</b>"
+             'infobox': "<b>Bridgeville</b>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
              'lat': 39.8516208,
              'lng': -75.44341800000001,
-             'infobox': "<b>Hello World</b>"
+             'infobox': "<b>Chadds Ford</b>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
              'lat': 39.835988,
              'lng': -122.1400,
-             'infobox': "<b>Hello World from other place</b>"
+             'infobox': "<b>Chichester</b>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
              'lat': 39.7946645,
              'lng': -75.46801770000002,
-             'infobox': "<b>Hello World</b>"
+             'infobox': "<b>Claymont</b>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
              'lat': 39.1582786,
              'lng': -75.5433835,
-             'infobox': "<b>Hello World from other place</b>"
+             'infobox': "<b>Dover-Gateway Shopping Center</b>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
              'lat': 39.1265445,
              'lng': -75.53303740000001,
-             'infobox': "<b>Hello World from other place</b>"
+             'infobox': "<b>Dover-Rodney Village</b>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
              'lat': 39.9709756,
              'lng': -75.30266440000003,
-             'infobox': "<b>Hello World</b>"
+             'infobox': "<b>Havertown</b>"
           },
         ]
     )
