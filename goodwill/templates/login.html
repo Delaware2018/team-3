@@ -1,0 +1,32 @@
+ (28 sloc) 849 Bytes
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<html>
+  <head>
+    <title>Login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link>
+  </head>
+  <body>
+    <div class="container">
+      <h1>SIGN IN</h1>
+<!--       <br> -->
+      <form action="" method="post">
+        Username<br>
+        <input type="text" placeholder="Enter username" name="username" value="{{
+          request.form.username}}"><p></p><br>
+        Password<br>
+        <input type="password" placeholder="Enter password" name="password" value="{{
+          request.form.password }}">
+        <br><br><input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p class="error" style="color: red;"><strong>Error:</strong> {{ error }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
+
+{% endblock %}

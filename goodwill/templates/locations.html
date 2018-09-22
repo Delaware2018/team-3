@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+<head>
+            {{"decoupled-map"|googlemap_js(37.4419, -122.1419, markers=[(37.4419, -122.1419)])}}
+            {{mymap.js}}
+            {{sndmap.js}}
+    </head>
+{% block body %} 
+    <h1>Delware Goodwill Locations</h1>
+
+        {% with map=googlemap_obj("another-map", 39.1582786,-75.5433835, markers=[(39.60655499999999, -75.71021300000001), (38.7364091, -75.5936), (39.8516208,-75.53792),(39.835988,-75.44341800000001),(39.7946645,-75.46801770000002),(39.1582786,-75.5433835),(39.1265445,-75.53303740000001),(39.9709756,-75.30266440000003)]) %}
+            {{map.html}}
+            {{map.js}}
+        {% endwith %}
+
+<h1> </h1>
+
+<img src="{{url_for('static', filename='Bear.png')}}"/>
+<h3>334 Fox Hunt Dr</h3>
+<h3>Bear, DE 19701</h3>
+<h3>United States (US)</h3>
+<h3>Phone: (302) 834-6780</h3>
+
+<img src="{{url_for('static', filename='Bridgeville.png')}}"/>
+<h3>18178 Sussex Highway</h3>
+<h3>Bridgeville, 19933</h3>
+<h3>United States (US)</h3>
+<h3>Phone: (302) 337-8561</h3>
+
+<img src="{{url_for('static', filename='Chadds Ford.png')}}"/>
+<h3>255 Wilmington West Chester Pike</h3>
+<h3>Chadds Ford, 19317</h3>
+<h3>United States (US)</h3>
+<h3>Phone: (610) 558-3722</h3>
+<h1></h1>
+
+<img src="{{url_for('static', filename='Chichester.png')}}"/>
+<h3>3294 Chichester Ave</h3>
+<h3>Boothwyn, 19061</h3>
+<h3>United States (US)</h3>
+<h3>Phone: (610) 494-8412</h3>
+<h1></h1>
+
+<img src="{{url_for('static', filename='Claymont.png')}}"/>
+<h3>3294 Chichester Ave</h3>
+<h3>Boothwyn, 19061</h3>
+<h3>United States (US)</h3>
+<h3>Phone: (610) 494-8412</h3>
+<h1></h1>
+
+<img src="{{url_for('static', filename='Dover.png')}}"/>
+<h3>1030 Forrest Avenue Suite 113</h3>
+<h3>Dover, 19904</h3>
+<h3>United States (US)</h3>
+<h3>Phone: (302) 678-4602</h3>
+<h1></h1>
+
+<img src="{{url_for('static', filename='Dover1.png')}}"/>
+<h3>1678 South Governors Avenue</h3>
+<h3>Dover, 19904</h3>
+<h3>United States (US)</h3>
+<h3>Phone: (302) 674-9071</h3>
+<h1></h1>
+
+<img src="{{url_for('static', filename='Havertown.png')}}"/>
+<h3>401 West Chester Pike</h3>
+<h3>Havertown, 19083</h3>
+<h3>United States (US)</h3>
+<h3>Phone: (484) 453-8149</h3>
+<h1></h1>
+
+<h2>For more locations click <a href= "https://www.goodwillde.org/goodwill-locations">here</a></h2>
+
+{% endblock %}
