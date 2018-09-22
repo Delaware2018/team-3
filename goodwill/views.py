@@ -31,6 +31,7 @@ def rewards():
     #loads the template donations
     return render_template('rewards.html')
 
+
 @app.route('/impact')
 def impact():
     #loads the template impact
