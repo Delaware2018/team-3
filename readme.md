@@ -1,7 +1,7 @@
 # Code for Good Team 3
 
 ## Goal
-This goal of this repository is to make a prototype web based application to connect Goodwill with its donators
+This goal of this branch is to create the page that will track what the donors have donated. and give them rewards if they donated.
 
 ## Contributors
 - Lela Bones
