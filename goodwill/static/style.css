@@ -1,20 +1,36 @@
-/*  Sidebar  */
-#sidebar-wrapper{
-    z-index: 1;
-    position: absolute;
-    width: 0;
-    height: = 100%;
-    overflow-y: hidden;
+.navbar-custom {
+    background-color:#2183c8;
+    color:#ffffff;
+    border-radius:0;
 }
 
-/*  Main content  */
-#page-content-wrapper{
-    width: 100%;
-    position: absolute;
-    padding 15px;
-    border: 5px;
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
 }
 
+.navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #2183c8;
+}
+
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+.navbar-custom .navbar-toggle {
+    background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+    background-color:#2183c8;
+}
 /*  Change width of sidebar for display  */
 #wrapper.menuDisplayed #sidebar-wrapper{
        width: 250px;
