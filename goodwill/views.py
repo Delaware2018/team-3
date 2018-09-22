@@ -71,6 +71,12 @@ def login():
 def thankyou():
     # load the template about
     return render_template('thankyou.html')
+
+# locally creates a page
+@app.route('/thankyouF')
+def thankyouF():
+    # load the template about
+    return render_template('thankyouF.html')
     
 
 # locally creates a page
