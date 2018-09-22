@@ -2,13 +2,73 @@
 
 {% block body %}
 <h1>Rewards</h1>
+<h2 style="color: Green;"> You have <var id="points">0</var> Points! </h2>
 
-<div style="width: 500px; height: 200px;"> 
-<p1> 10% Off! </p1>
-<p1> 1000 Points </p1>
+<div id="parent" style=" display: flex;padding: 10px 10px 10px 10px;">
 
+	<div id="r1" style="width: 200px; height: 200px;border-style: solid;background-color:orange;text-align:center;"> 
+	<p style="font-size: 48px;text-align:center; "> 10% Off! </p>
+
+	<p style="font-size: 28px;text-align:center; "> 1000 Points </p>
+
+	<button style="font-size: 28px;"onclick="R1()" type="button">Redeem!</button>
+
+	</div>
+	
+	
+
+	<div id="r2" style="width: 200px; height: 200px;border-style: solid;background-color:orange;text-align:center;"> 
+	<p style="font-size: 48px;text-align:center; "> 20% Off! </p>
+
+	<p style="font-size: 28px;text-align:center; "> 1750 Points </p>
+
+	<button style="font-size: 28px;" onclick="R2()" type="button">Redeem!</button>
+
+	</div>
+
+	<div id="r3" style="width: 200px; height: 200px;border-style: solid;background-color:orange;text-align:center;"> 
+	<p style="font-size: 24px;text-align:center; "> Buy One get One FREE! </p>
+
+	<p style="font-size: 28px;text-align:center; "> 2000 Points </p>
+
+	<button style="font-size: 28px;" onclick="R3()" type="button">Redeem!</button>
+
+	</div>
 
 </div>
 
+
+<script>
+	var x = 1500;
+ document.getElementById("points").innerHTML = x;
+
+function R1(){
+	if (x >=1000){
+		x-=1000;
+	}else{
+		alert("Sorry! You don't have enough points.");
+	}
+document.getElementById("points").innerHTML = x;
+}
+
+function R2(){
+	if (x >=1750){
+		x-=1750;
+	}else{
+		alert("Sorry! You don't have enough points.");
+	}
+document.getElementById("points").innerHTML = x;
+}
+
+function R3(){
+	if (x >=2000){
+		x-=2000;
+	}else{
+		alert("Sorry! You don't have enough points.");
+	}
+document.getElementById("points").innerHTML = x;
+}
+
+</script>
 
 {% endblock %}
