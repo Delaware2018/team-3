@@ -41,6 +41,12 @@ def impact():
 def about():
     # load the template about
     return render_template('about.html')
+
+# locally creates a page
+@app.route('/form')
+def form():
+    # load the template about
+    return render_template('form.html')
     
 # locally creates a page
 @app.route('/help')
