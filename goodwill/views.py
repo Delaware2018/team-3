@@ -53,6 +53,12 @@ def form():
 def create_account():
     # load the template about
     return render_template('create_account.html')
+
+# locally creates a page
+@app.route('/form_purchase')
+def form_purchase():
+    # load the template about
+    return render_template('form_purchase.html')
     
 # locally creates a page
 @app.route('/help')
