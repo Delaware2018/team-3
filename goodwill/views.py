@@ -14,7 +14,7 @@ from flask_googlemaps import Map
 app = Flask(__name__)
 GoogleMaps(app)
 
-@app.route("/locations")
+@app.route("/map_loc")
 def mapview():
     # creating a map in the view
     mymap = Map(
@@ -25,24 +25,62 @@ def mapview():
     )
     sndmap = Map(
         identifier="sndmap",
-        lat=37.4419,
-        lng=-122.1419,
+        lat=39.1582786,
+        lng= -75.5433835,
         markers=[
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-             'lat': 37.4419,
-             'lng': -122.1419,
+             'lat': 39.60655499999999,
+             'lng': -75.71021300000001,
              'infobox': "<b>Hello World</b>"
           },
           {
              'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-             'lat': 37.4300,
+             'lat': 38.7364091,
+             'lng': -75.5936,
+             'infobox': "<b>Hello World from other place</b>"
+          },
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+             'lat': 39.8516208,
+             'lng': -75.44341800000001,
+             'infobox': "<b>Hello World</b>"
+          },
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
+             'lat': 39.835988,
              'lng': -122.1400,
              'infobox': "<b>Hello World from other place</b>"
-          }
+          },
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+             'lat': 39.7946645,
+             'lng': -75.46801770000002,
+             'infobox': "<b>Hello World</b>"
+          },
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+             'lat': 39.1582786,
+             'lng': -75.5433835,
+             'infobox': "<b>Hello World from other place</b>"
+          },
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+             'lat': 39.1265445,
+             'lng': -75.53303740000001,
+             'infobox': "<b>Hello World from other place</b>"
+          },
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+             'lat': 39.9709756,
+             'lng': -75.30266440000003,
+             'infobox': "<b>Hello World</b>"
+          },
         ]
     )
-    return render_template('locations.html', mymap=mymap, sndmap=sndmap)
+    return render_template('map_loc.html', mymap=mymap, sndmap=sndmap)
+
+
 # locally creates a page
 @app.route('/')
 def index():
@@ -104,5 +142,4 @@ def thankyou():
 if __name__ == '__main__':
     # runs app in debug mode
         app.run(port=5000, debug=True)
-        # app.run()
-  
+# app.run()

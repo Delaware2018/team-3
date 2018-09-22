@@ -1,20 +1,14 @@
 {% extends 'layout.html' %}
-<head>
+{% block body %}
             {{"decoupled-map"|googlemap_js(37.4419, -122.1419, markers=[(37.4419, -122.1419)])}}
             {{mymap.js}}
             {{sndmap.js}}
-    </head>
-{% block body %} 
-    <h1>Delware Goodwill Locations</h1>
+    <body>
+        <h1>Our Locations in Delaware</h1>
 
-        {% with map=googlemap_obj("another-map", 39.1582786,-75.5433835, markers=[(39.60655499999999, -75.71021300000001), (38.7364091, -75.5936), (39.8516208,-75.53792),(39.835988,-75.44341800000001),(39.7946645,-75.46801770000002),(39.1582786,-75.5433835),(39.1265445,-75.53303740000001),(39.9709756,-75.30266440000003)]) %}
-            {{map.html}}
-            {{map.js}}
-        {% endwith %}
-
-<h1> </h1>
-
-<img src="{{url_for('static', filename='Bear.png')}}"/>
+        {{sndmap.html}}
+        
+        <img src="{{url_for('static', filename='Bear.png')}}"/>
 <h3>334 Fox Hunt Dr</h3>
 <h3>Bear, DE 19701</h3>
 <h3>United States (US)</h3>
