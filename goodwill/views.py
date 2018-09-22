@@ -63,20 +63,14 @@ def rewards():
     #loads the template donations
     return render_template('rewards.html')
 
-<<<<<<< HEAD
-@app.route('/impact')
-def impact():
-    #loaffs the template impact
-    return render_template('impact.html')
 
-||||||| merged common ancestors
-=======
+
 @app.route('/impact')
 def impact():
     #loads the template impact
     return render_template('impact.html')
 
->>>>>>> 7727510542299bf6629db3565b32db7d7880f5d0
+
 # locally creates a page
 @app.route('/about')
 def about():
