@@ -1,9 +1,12 @@
+<!--Author: Tony Cicero
+    This document conatins the homepage contents-->
 {% extends 'layout.html' %}
 
 {% block body %}
-<button class="collapsible">Items Donated</button>
-	
-<div class="content">
+
+<h1 style="background-color:lightgray;">Items Purchased</h1>
+<form action="/action_page.php">
+
 <label for="elect">Electronics</label>
  	<input type="number" id="elect" name="elect" placeholder="0" >
 	<br>
@@ -40,6 +43,49 @@
 	
 
 
-</div>
+
+<input type="submit">
+</form>
+
+<style>
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: #555;
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+</style>
+
+<!--js script to collapse/expand boxes -->
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
 
 {% endblock %}

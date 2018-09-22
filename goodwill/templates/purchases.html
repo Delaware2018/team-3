@@ -1,19 +1,54 @@
+<!--Author: Tony Cicero
+    This document conatins the homepage contents-->
 {% extends 'layout.html' %}
 
 {% block body %}
-<button class="collapsible">Open Section 2</button>
-<div class="content">
-  <p>test</p>
-</div>
+
+
+<form action="/action_page.php">
+
+<h1 style="background-color:lightgray;">Items Purchased</h1>
+	
+
+	<label for="elect">Electronics</label>
+ 	<input type="number" id="elect" name="elect" placeholder="0" >
+	<br>
+	<label for="veh">Vehicles</label>
+ 	<input type="number" id="veh" name="veh" placeholder="0">
+	<br>
+	<label for="books">Books</label>
+ 	<input type="number" id="books" name="books" placeholder="0" >
+	<br>
+	<label for="cloth">Clothing/Accessories</label>
+ 	<input type="number" id="cloth" name="cloth" placeholder="0">
+	<br>
+	<label for="Kitchen">Kitchen/Cookware</label>
+ 	<input type="number" id="Kitchen" name="Kitchen" placeholder="0" >
+	<br>
+	<label for="furnish">Furniture</label>
+ 	<input type="number" id="furnish" name="furnish" placeholder="0">
+	<br>
+	<label for="CD">CDs/DVDs/Video Games</label>
+ 	<input type="number" id="CD" name="CD" placeholder="0" >
+	<br>
+	<label for="SP">Sporting Goods</label>
+ 	<input type="number" id="SP" name="SP" placeholder="0">
+	<br>
+	<label for="toys">Toys</label>
+ 	<input type="number" id="toys" name="toys" placeholder="0" >
+	<br>
+	<label for="food">Non-perishable Food</label>
+ 	<input type="number" id="food" name="food" placeholder="0">
+	<br>
+	<label for="Med">Medical Equiptment(Walkers, Canes, and Shower Seats)</label>
+ 	<input type="number" id="med" name="med" placeholder="0" >
+	<br>
+	
+
+
 
 <input type="submit">
 </form>
-
-
-
-
-
-
 
 <style>
 .collapsible {
@@ -54,4 +89,6 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
+
+
 {% endblock %}

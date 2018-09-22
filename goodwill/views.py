@@ -69,6 +69,12 @@ def impact():
     return render_template('impact.html')
 
 # locally creates a page
+@app.route('/create_account')
+def create_account():
+    # load the template about
+    return render_template('create_account.html')
+
+# locally creates a page
 @app.route('/about')
 def about():
     # load the template about
