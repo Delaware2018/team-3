@@ -87,9 +87,19 @@ def about():
     
 # locally creates a page
 @app.route('/help')
-def help_page():
+def help():
     return render_template('help.html')
 
+# locally creates a page
+@app.route('/feedback')
+def feedback():
+    return render_template('feedback.html')
+
+# locally creates a page
+@app.route('/thankyou')
+def thankyou():
+    # load the template about
+    return render_template('thankyou.html')
 
 if __name__ == '__main__':
     # runs app in debug mode

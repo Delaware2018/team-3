@@ -8,7 +8,7 @@
 
 <h1 style="background-color:lightgray;">Items Purchased</h1>
 
-<form action="/action_page.php">
+<form action="/action_page.php" onsubmit="return redirect()">
 	
 
 	<label for="elect">Electronics</label>
@@ -52,7 +52,12 @@
 </form>
 
 
-
+<script>
+function redirect() {
+  window.location.replace("thankyou");
+  return false;
+}
+</script>
 
 
 
